@@ -1,4 +1,4 @@
-import MagicUnit from './MagicUnit';
+  import MagicUnit from './MagicUnit';
 
 export default class Magician extends MagicUnit {
   constructor(attack) {
