@@ -4,6 +4,15 @@ export default class MagicUnit {
     this.stoned = false;
   }
 
+  get Stoned() {
+    return this.c_stoned !== undefined ? this.c_stoned : this.stoned;
+  }
+
+  set Stoned(value) {
+    if (typeof value !== 'boolean') throw new Error('Некорректный тип входного параметра. Требуется булево значение');
+    this.c_stoned = value;
+  }
+
   setStoned() {
     this.stoned = true;
   }
