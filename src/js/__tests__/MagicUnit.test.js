@@ -1,4 +1,6 @@
 import MagicUnit from '../MagicUnit';
+import Daemon from '../Daemon';
+import Magician from '../Magician';
 
 test.each([
   [1, 100],
@@ -48,4 +50,14 @@ test.each([
   const Mag = new MagicUnit(100);
   Mag.setStoned();
   expect(Mag.getАttack(dist)).toBe(result);
+});
+
+test('Daemon stoned setter', () => {
+  Daemon.stoned = true;
+  expect(Daemon.stoned).toBe(true);
+});
+
+test('Magician stoned setter', () => {
+  Magician.stoned = true;
+  expect(Magician.stoned).toBe(true);
 });
